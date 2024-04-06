@@ -1,1 +1,34 @@
-<p>dashboard works!</p>
+<div class="container">
+</div>
+<div style="margin-top:85px; margin-left:1038px;"></div>
+<div style="color:#344563">
+  <input #searchInput type="search" placeholder="Search Company Name" 
+         style="background-repeat: no-repeat; background-position: 10px center; padding-left:36px; border: 2px solid gainsboro; border-color: gainsboro; font-size: 15px; color: #344563; border-radius: 2px; margin-left: 409px; width: 521px; height: 49px; margin-top: 23px;margin-bottom: 20px;" 
+         (input)="searchItem($event)" />
+</div>
+<div class="container mt-5">
+  <table mat-table [dataSource]="filteredData" style="border: 2px solid gainsboro;" matSort>
+    <ng-container matColumnDef="company">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header matSort (matSortChange)="sortData()">COMPANY</th>
+      <td mat-cell *matCellDef="let row">{{row.company}}</td>
+    </ng-container>
+    <ng-container matColumnDef="marketPrice">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header matSort (matSortChange)="sortData()"> MARKET PRICE</th>
+      <td mat-cell *matCellDef="let row">{{row.marketPrice}}</td>
+    </ng-container>
+    <ng-container matColumnDef="closePrice">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header matSort (matSortChange)="sortData()">CLOSE PRICE</th>
+      <td mat-cell *matCellDef="let row">{{row.closePrice}}</td>
+    </ng-container>
+    <ng-container matColumnDef="marketCap">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header matSort (matSortChange)="sortData()"> MARKET CAP</th>
+      <td mat-cell *matCellDef="let row">{{row.marketCap}}</td>
+    </ng-container>
+    <ng-container matColumnDef="trend">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header matSort (matSortChange)="sortData()"> TREND</th>
+      <td mat-cell *matCellDef="let row">{{row.trend}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="['company', 'marketPrice', 'closePrice','marketCap','trend']"></tr>
+    <tr class="clickable-row" mat-row *matRowDef="let row; columns: ['company', 'marketPrice', 'closePrice','marketCap','trend']"></tr>
+  </table>
+</div>

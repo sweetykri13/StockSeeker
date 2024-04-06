@@ -8,6 +8,7 @@ import { NavbarComponent } from './Pages/navbar/navbar.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import {MatTableModule} from '@angular/material/table'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { DashboardComponent } from './Pages/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

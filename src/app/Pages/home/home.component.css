@@ -1,0 +1,17 @@
+.container {
+    padding-top: 20px; /* Adjust padding top to create space above the layout */
+  }
+  .cancelbutton {
+    color: white;
+    border: green;
+    border-radius: 4px;
+    height: 35px;
+    width: 110px;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    margin-left: 248px;
+    margin-top:70px;
+  }
+  
+  

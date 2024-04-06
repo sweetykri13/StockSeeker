@@ -9,6 +9,9 @@ import { LoginComponent } from './Pages/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table'
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,11 @@ import {MatTableModule} from '@angular/material/table'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,MatTableModule
+    AppRoutingModule,
+    MatTableModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

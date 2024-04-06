@@ -10,35 +10,35 @@
       <div>
         <span style="font-size: 17px; font-weight: 500; color: #344563 ">Sign up to continue</span>
       </div>
-      <form>
+      <form (ngSubmit)="signUp()">
         <div style="margin-top:20px;">
           <label style="margin-left:-170px;font-size:16px;font-weight:500;color:#344563;margin-bottom:5px;">First Name</label>
           <div>
-            <input type="text" style="width:250px;height:32px;border-color:gainsboro">
+            <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="firstName" style="width:250px;height:32px;border-color:gainsboro">
           </div>
         </div>
         <div style="margin-top:20px;">
           <label style="margin-left:-173px;font-size:16px;font-weight:500;color:#344563;margin-bottom:5px;">Last Name</label>
           <div>
-            <input type="text" style="width:250px;height:32px;border-color:gainsboro">
+            <input type="text" name="lastName" placeholder="Last Name" [(ngModel)]="lastName" style="width:250px;height:32px;border-color:gainsboro">
           </div>
         </div>
         <div style="margin-top:20px;">
           <label style="margin-left:-196px;font-size:16px;font-weight:500;color:#344563;margin-bottom:5px;">EmailId</label>
           <div>
-            <input type="text" style="width:250px;height:32px;border-color:gainsboro">
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="email" style="width:250px;height:32px;border-color:gainsboro">
           </div>
         </div>
         <div style="margin-top:20px;">
           <label style="margin-left:-179px;font-size:16px;font-weight:500;color:#344563;margin-bottom:5px;">Password</label>
           <div>
-            <input type="text" style="width:250px;height:32px;border-color:gainsboro">
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="password" style="width:250px;height:32px;border-color:gainsboro">
           </div>
         </div>
         <div style="margin-top:20px;">
           <label style="margin-left:-120px;font-size:16px;font-weight:500;color:#344563;margin-bottom:5px;">Confirm Password</label>
           <div>
-            <input type="text" style="width:250px;height:32px;border-color:gainsboro">
+            <input type="password" name="confirmPswd" placeholder="Confirm Password" [(ngModel)]="confirmPswd" style="width:250px;height:32px;border-color:gainsboro">
           </div>
           <div style="margin-top:25px;">
             <button class="cancelbutton" style="margin-bottom:10px; font-size: 15px; width: 97px; margin-right:38px;margin-left:5px;"

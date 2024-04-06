@@ -40,6 +40,33 @@ export class HttpService {
 
   }
 
+  login(email: any, paswd: any) {
+    const payload = {
+      email: email,
+      password: paswd
+    }
+    const _url = `/api/users/login`
+    return this.http
+      .post(_url, payload)
+      .pipe(catchError((error: HttpErrorResponse) => throwError(() => error)));
+  }
+
+  register(firstName: any, lastName: any, email: any, password:any, contact: any) {
+    const payload = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+      contact: contact
+
+    }
+    const _url = `/api/users/register`
+    return this.http
+      .post(_url, payload)
+      .pipe(catchError((error: HttpErrorResponse) => throwError(() => error)));
+
+  }
+
   // getTrackListFromApi(payload: any): Observable<any> {
   //   return this.httpClient
   //     .post(

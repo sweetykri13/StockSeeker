@@ -1,0 +1,21 @@
+.cancelbutton {
+    color: white;
+    border: green;
+    border-radius: 4px;
+    height: 33px;
+    /*  width: 110px;*/
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    /* margin-left: 248px;*/
+  }
+  input[type=text] {
+    outline: none;
+    border-color: gainsboro;
+  }
+  
+    input[type=text]:focus {
+      border-color: green;
+      box-shadow: 0 0 1px 0 green;
+    }
+  

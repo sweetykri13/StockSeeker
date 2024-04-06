@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg bg-white fixed-top mynav pb-0 pt-0" style="height: 60px; border-bottom: groove; border-bottom: 1px solid gainsboro;">
     <div class="container-fluid">
       <a class="navbar-brand align-self-baseline login" >StockSeeker</a>    
-      <div>
+      <div *ngIf="showLoginBtn">
         <span class="nav-item dropdown">
             <button class="navbar-brand cancelbutton" data-bs-toggle="dropdown" style="font-size: 17px; text-align: center;" (click)="navigateTo()">Login</button>         
         </span>

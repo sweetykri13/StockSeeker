@@ -10,7 +10,7 @@
 table {
     border-collapse: collapse;
     width: 70%;
-    margin-top: -40px;
+    margin-top: 0;
     margin-left: -31px;
 }
 
@@ -29,6 +29,7 @@ td {
     text-align: left;
     border-bottom: 2px solid gainsboro;
     color: #42526e;
+    max-height: 460px;overflow: auto;
 }
 
 /* Apply hover effect to clickable row */
@@ -42,8 +43,8 @@ td {
 th {
     padding: 8px;
     text-align: left;
-    border-bottom: 4px solid #ddd;
-    color: #42526e;
+    border-bottom: 4px solid green;
+    color: green;
 }
 
 .decfont {
@@ -147,4 +148,19 @@ th {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem
+}
+.background-image {
+    position: relative;
+}
+
+.background-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    z-index: 1; /* Ensure content is above the background image */
+    /* Add your existing styles for the container */
 }

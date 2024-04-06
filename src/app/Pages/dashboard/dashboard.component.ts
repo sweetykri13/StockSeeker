@@ -3542,13 +3542,8 @@ export class DashboardComponent implements OnInit {
   
   searchItem(event: Event) {
     this.dataSource.filter = this.searchQuery.trim().toLowerCase();
-    // const searchValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
-    // console.log(searchValue, 'SEARCH VALUE')
-    // this.filteredData = this.dataSource.filter(item => 
-    //   item.livePriceDto.symbol.toLowerCase().includes(searchValue)
-    // );
-    // console.log(this.filteredData, 'FILTERED DATA')
   }
   sortData() {}
+  
 }
 

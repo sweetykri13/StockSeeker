@@ -1,6 +1,6 @@
 <div class="container">
     <div class="columns is-mobile">
-        <div class="column tick" *ngFor="let stock of filteredStockData;let i = index">
+        <div class="column tick" *ngFor="let stock of filteredStockData;let i = index">      
             <ng-container *ngIf="i < 6">
                 <div class="subtitle is-6">{{stock.livePriceDto.symbol}}<span
                         class="price is-pulled-right"><strong>{{stock.livePriceDto.ltp}}</strong></span>
@@ -18,13 +18,17 @@
             </ng-container>
         </div>
     </div>
+    <div class="background-image">
+        <img src="assets/stockhomeimage.jpg" alt="Background Image" style="width: 100%; height: calc(100vh - 104px); object-fit: cover;opacity: 0.2;">
+        <div class="container">
 <div style="color:#344563; display: flex; justify-content: center;">
+    
     <input #searchInput type="search" placeholder="Search Company Name"
-        style="background-repeat: no-repeat; background-position: 10px center; padding-left: 16px; margin: 20px 0; border: 2px solid gainsboro; border-color: gainsboro; font-size: 15px; color: #344563; border-radius: 2px; width: 521px; height: 50px;"
+        style="background-repeat: no-repeat; background-position: 10px center; padding-left: 16px; margin: 20px 0; border: 2px solid gainsboro; border-color: green; font-size: 15px; color: green; border-radius: 2px; width: 521px; height: 50px;"
         (input)="searchItem($event)" [(ngModel)]="searchQuery" />
 </div>
-<div class="mt-5">
-    <table mat-table [dataSource]="dataSource" style="border: 2px solid gainsboro; margin-left: 0; height: ;" matSort>
+<div class="" style="max-height: 460px;overflow: auto;border: 2px solid green;">
+    <table mat-table [dataSource]="dataSource" style="margin-left: 0;max-height: 470px;overflow: auto;margin-top: 0;" matSort>
         <ng-container matColumnDef="company">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>COMPANY</th>
             <td mat-cell *matCellDef="let row">{{row.companyName}}</td>
@@ -51,4 +55,6 @@
             *matRowDef="let row; columns: ['company', 'marketPrice', 'closePrice','marketCap','trend']"></tr>
     </table>
 </div>
+</div>
+    </div>
 </div>

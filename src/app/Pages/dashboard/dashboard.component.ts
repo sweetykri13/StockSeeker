@@ -11,7 +11,6 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class DashboardComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
-  filteredData = this.dataSource;
   stockData: any;
   filteredStockData: any;
   searchQuery: string = '';
@@ -3539,9 +3538,13 @@ export class DashboardComponent implements OnInit {
   this.filteredStockData = this.stockData.records.slice(0,6)
     
   }
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+  }
   
   searchItem(event: Event) {
     this.dataSource.filter = this.searchQuery.trim().toLowerCase();
+    this.dataSource.sort = this.sort;
   }
   sortData() {}
   
